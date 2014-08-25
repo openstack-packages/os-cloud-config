@@ -47,9 +47,14 @@ sed -i 's/__version__.*/__version__="%{version}"/'  os_cloud_config/__init__.py
 %{_bindir}/generate-keystone-pki
 %{_bindir}/init-keystone
 %{_bindir}/register-nodes
+%{_bindir}/setup-endpoints
+%{_bindir}/setup-neutron
 
 
 %changelog
+* Mon Aug 25 2014 Derek Higgins <derekh@redhat.com> - XXX
+- Add setup-endpoints and setup-neutron
+
 * Fri Aug 01 2014 Derek Higgins <derekh@redhat.com> - XXX
 - initial package
 
