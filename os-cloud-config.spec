@@ -45,6 +45,7 @@ sed -i 's/__version__.*/__version__="%{version}"/'  os_cloud_config/__init__.py
 %doc LICENSE
 %{python_sitelib}/os_cloud_config*
 %{_bindir}/generate-keystone-pki
+%{_bindir}/generate-ssl-cert
 %{_bindir}/init-keystone
 %{_bindir}/register-nodes
 %{_bindir}/setup-endpoints
@@ -52,6 +53,9 @@ sed -i 's/__version__.*/__version__="%{version}"/'  os_cloud_config/__init__.py
 
 
 %changelog
+* Tue Oct 07 2014 Dan Prince <dprince@redhat.com> - XXX
+- Add generate-ssl-cert
+
 * Mon Aug 25 2014 Derek Higgins <derekh@redhat.com> - XXX
 - Add setup-endpoints and setup-neutron
 
