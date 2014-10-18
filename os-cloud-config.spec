@@ -48,10 +48,14 @@ sed -i 's/__version__.*/__version__="%{version}"/'  os_cloud_config/__init__.py
 %{_bindir}/init-keystone
 %{_bindir}/register-nodes
 %{_bindir}/setup-endpoints
+%{_bindir}/setup-flavors
 %{_bindir}/setup-neutron
 
 
 %changelog
+* Sat Oct 18 2014 Dan Prince <dprince@redhat.com> - XXX
+- Add bin/setup-flavors
+
 * Fri Oct 10 2014 Dan Prince <dprince@redhat.com> - XXX
 - Remove generate-ssl-cert
 
