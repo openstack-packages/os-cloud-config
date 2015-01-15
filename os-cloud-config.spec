@@ -41,6 +41,7 @@ configuration of OpenStack clouds.
 %{python_sitelib}/os_cloud_config*
 %{_bindir}/generate-keystone-pki
 %{_bindir}/init-keystone
+%{_bindir}/init-keystone-heat-domain
 %{_bindir}/register-nodes
 %{_bindir}/setup-endpoints
 %{_bindir}/setup-flavors
