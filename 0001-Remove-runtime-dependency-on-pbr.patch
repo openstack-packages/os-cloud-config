@@ -1,0 +1,30 @@
+From f18ffb30c182499b00217d837ec93921d8c857c6 Mon Sep 17 00:00:00 2001
+From: James Slagle <jslagle@redhat.com>
+Date: Tue, 6 Jan 2015 17:27:00 -0500
+Subject: [PATCH] Remove runtime dependency on pbr
+
+---
+ os_cloud_config/__init__.py | 11 +++++++++--
+ 1 file changed, 9 insertions(+), 2 deletions(-)
+
+diff --git a/os_cloud_config/__init__.py b/os_cloud_config/__init__.py
+index 29f97ce..22f3ef6 100644
+--- a/os_cloud_config/__init__.py
++++ b/os_cloud_config/__init__.py
+@@ -12,7 +12,14 @@
+ # License for the specific language governing permissions and limitations
+ # under the License.
+ 
+-import pbr.version
++class VersionInfo(object):
++    release = "REDHATRELEASE"
++    version = "REDHATVERSION"
+ 
++    def version_string(self):
++        return self.version
+ 
+-__version__ = pbr.version.VersionInfo('os_cloud_config').version_string()
++    def release_string(self):
++        return self.release
++
++__version__ = VersionInfo().version_string()
