@@ -47,6 +47,7 @@ configuration of OpenStack clouds.
 %{_bindir}/setup-endpoints
 %{_bindir}/setup-flavors
 %{_bindir}/setup-neutron
+%{_bindir}/upload-kernel-ramdisk
 
 %changelog
 * Tue Oct 28 2014 James Slagle <jslagle@redhat.com> 0.1.13-1
