@@ -36,6 +36,9 @@ configuration of OpenStack clouds.
 %install
 %{__python} setup.py install -O1 --skip-build --root %{buildroot}
 
+# Delete tests
+rm -fr %{buildroot}%{python_sitelib}/os_cloud_config/tests
+
 %files
 %doc README.rst
 %doc LICENSE
