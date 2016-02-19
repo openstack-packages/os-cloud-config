@@ -1,6 +1,6 @@
 Name:			os-cloud-config
 Version:		XXX
-Release:		XXX{?dist}
+Release:		XXX
 Summary:		Configuration for OpenStack clouds
 
 License:		ASL 2.0
