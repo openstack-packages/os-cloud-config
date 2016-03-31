@@ -31,15 +31,15 @@ configuration of OpenStack clouds.
 %setup -q -n %{name}-%{upstream_version}
 
 %build
-%{__python} setup.py build
+%{__python2} setup.py build
 
 %install
-%{__python} setup.py install -O1 --skip-build --root %{buildroot}
+%{__python2} setup.py install -O1 --skip-build --root %{buildroot}
 
 %files
 %doc README.rst
-%doc LICENSE
-%{python_sitelib}/os_cloud_config*
+%license LICENSE
+%{python2_sitelib}/os_cloud_config*
 %{_bindir}/generate-keystone-pki
 %{_bindir}/init-keystone
 %{_bindir}/init-keystone-heat-domain
@@ -50,28 +50,3 @@ configuration of OpenStack clouds.
 %{_bindir}/upload-kernel-ramdisk
 
 %changelog
-* Tue Oct 28 2014 James Slagle <jslagle@redhat.com> 0.1.13-1
-- Update to upstream 0.1.13
-
-* Wed Oct 01 2014 James Slagle <jslagle@redhat.com> 0.1.11-1
-- Update to upstream 0.1.11
-
-* Mon Sep 29 2014 James Slagle <jslagle@redhat.com> 0.1.10-2
-- Remove Requires on python-ironicclient
-
-* Mon Sep 29 2014 James Slagle <jslagle@redhat.com> 0.1.10-1
-- Update to upstream 0.1.10
-
-* Fri Sep 12 2014 James Slagle <jslagle@redhat.com> - 0.1.9-1
-- Setup for rdopkg
-- Bump to 0.1.9
-
-* Fri Sep 12 2014 James Slagle <jslagle@redhat.com> - 0.1.8-3
-- Add python-pbr to BuildRequires
-
-* Fri Sep 05 2014 James Slagle <jslagle@redhat.com> - 0.1.8-2
-- Updating spec for Fedora review process
-
-* Mon Aug 25 2014 Derek Higgins <derekh@redhat.com> - 0.1.8-1
-- Add setup-endpoints and setup-neutron
-- initial package
